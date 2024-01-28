@@ -4,7 +4,6 @@ import { Character } from 'types/Character';
 
 export default function useGetCharacters(pageNumber: number) {
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(false);
   const [characters, setCharacters] = useState<Character[]>([]);
   const [hasMore, setHasMore] = useState(false);
 
@@ -22,15 +21,13 @@ export default function useGetCharacters(pageNumber: number) {
       setHasMore(response.info.next !== null);
     } catch (err) {
       console.error('Error fetching characters:', err);
-      setError(true);
     }
   };
 
   useEffect(() => {
     setLoading(true);
-    setError(false);
     fetchCharacters(pageNumber);
   }, [pageNumber]);
 
-  return { loading, error, characters, hasMore };
+  return { loading, characters, hasMore };
 }

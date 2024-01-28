@@ -21,7 +21,6 @@ module.exports = {
   ignorePatterns: ['.eslintrc.js', 'next.config.js'],
   plugins: [
     'react',
-    'react-hooks',
     '@typescript-eslint',
   ],
   rules: {
