@@ -1,0 +1,23 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 50px 0;
+  width: 100%;
+  z-index: 9;
+  height: 150px;
+}
+
+.image {
+  height: 130px;
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    height: 100px;
+  }
+
+  .image {
+    height: 80px;
+  }
+}
