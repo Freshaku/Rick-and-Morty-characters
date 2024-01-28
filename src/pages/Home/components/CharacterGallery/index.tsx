@@ -9,6 +9,7 @@ const CharacterGallery: React.FC = () => {
     characters,
     hasMore,
     loading,
+    error,
   } = useGetCharacters(pageNumber);
 
   const observer = useRef<IntersectionObserver | null>(null);
@@ -44,7 +45,10 @@ const CharacterGallery: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className={styles.text}>{loading && 'Loading...'}</div>
+      <div className={styles.text}>
+        {loading && 'Loading...'}
+        {error && `Error: ${error}`}
+      </div>
     </>
   );
 };
