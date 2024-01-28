@@ -4,9 +4,9 @@
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: 30px;
-  max-height: 1030px;
-  max-width: 1030px;
+  gap: 40px;
+  max-height: 1080px;
+  max-width: 1080px;
   overflow: auto;
   margin: 0 auto;
 }
@@ -15,6 +15,10 @@
   width: 180px;
   height: 180px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .image {
