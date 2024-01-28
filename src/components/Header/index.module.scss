@@ -9,11 +9,15 @@
 }
 
 .image {
-  height: inherit;
+  height: 130px;
 }
 
 @media screen and (max-width: 480px) {
   .header {
     height: 100px;
+  }
+
+  .image {
+    height: 80px;
   }
 }

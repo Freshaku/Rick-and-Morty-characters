@@ -41,12 +41,12 @@ const CharacterGallery: React.FC = () => {
             className={styles.item}
           >
             <img className={styles.image} src={character.image} alt={character.name} />
-            <p className={styles.text}>{character.name}</p>
+            <p className={styles.caption}>{character.name}</p>
           </div>
         ))}
       </div>
-      <div>{loading && 'Loading...'}</div>
-      <div>{error && 'Error'}</div>
+      <div className={styles.text}>{loading && 'Loading...'}</div>
+      <div className={styles.text}>{error && 'Error'}</div>
     </>
   );
 };
